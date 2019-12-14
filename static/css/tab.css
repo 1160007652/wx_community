@@ -1,0 +1,77 @@
+
+.tab_title{
+    display:flex;
+    display:-webkit-flex;/*Safari*/
+    justify-content:space-between;/*水平排布方式*/
+    align-items:center;
+    padding:4px;
+    border-bottom: 1px solid #E9E6E6;
+}
+.tab-box{
+    width: 94%;
+    margin: 3%;
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(229,229,229,0.50);
+    border-radius: 5px;
+    border-radius: 5px;
+}
+.tab_title span{
+    display: inline-block;
+    font-size: 6px;
+    color: #4C4C4C;
+    letter-spacing: -0.33px;
+    text-align: center;
+    padding: 3px;
+}
+
+.tab_title span:last-child{
+    color: #FE3F3F;
+}
+.tab_list ul{
+    width: 90%;
+    padding: 2% 5%;
+    display:flex;
+   display:-webkit-flex;/*Safari*/
+   justify-content:space-between;/*水平排布方式*/
+   align-items:center;
+}
+.tab_list li{
+    text-align: center;
+}
+
+.tab_list li a{
+    display: block;
+    font-size: 5px;
+    color: #989898;
+}
+.tab_list li a:hover{
+    text-decoration: none;
+}
+.tab_list li a:first-child{
+    padding-bottom: 2.5px;
+}
+.tab_list li{
+    position: relative;
+}
+.tab_list li:after{
+    content: "";
+    width: 0.5px;
+    background: #D8D8D8;
+    height: 7px;
+    position: absolute;
+    left: 150%;
+    top:5px;
+}
+.tab_list li:last-child:after{
+    width: 0px;
+}
+.unpaid{
+    color: #3F90FE !important
+}
+.nomore{
+    font-size: 5px;
+    color: #A1A4A3;
+    letter-spacing: 1.14px;
+    text-align: center;
+    padding: 12.5px 0 27px 0;
+}
