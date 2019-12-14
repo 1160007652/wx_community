@@ -1,0 +1,181 @@
+.mayself-wrap{
+    position: relative;
+    /* background: #f4f4f4; */
+}
+.mayself-wrap .mayself-bg{
+    position: relative;
+    display: inline-block;
+    width: 203.5px;
+    height: 93px;
+    background-size: 100% 100%; 
+    background-repeat: no-repeat; 
+    background-image:url("../../src/assets/myself-bg.png"); 
+    background-position: -8px 0;
+}
+.mayself-bg .header-cont{
+    /* text-align: center; */
+    display: flex;
+    flex-direction:column; 
+    justify-content: center;
+    padding-top: 11.5px;
+    position: relative;
+}
+.header-cont .header-set{
+    display: inline-block;
+    background: #ffffff;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    color: #1062D0;
+    letter-spacing: 1px; /* no */
+    /* font-size: 12px; */
+    font-size: 5px;
+    padding-left: 3px;
+}
+.header-cont .header-img .user-img{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.user-img .m-img-box{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+}
+.user-img img{
+    display: inline-block;
+    vertical-align: top;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;  /* no */
+    box-sizing: border-box;
+}
+.user-img .icon-authen{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: url("../../src/assets/icon-authen.png") no-repeat;
+    background-size: 100% 100%;
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 2px;
+    z-index: 1;
+}
+.txt-name{
+    padding-top: 2.5px;
+    padding-bottom: 6px;
+    color: #ffffff;
+    font-size: 12px; /* no */
+}
+.txt-num{
+    color: #ffffff;
+    padding-right: 3px;
+}
+.user-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    font-size: 12px; /* no */
+}
+.user-option .option-item{
+    /* display: inline-block; */
+    border: 1px solid #FFFFFF;/* no */
+    border-radius: 13.5px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+.user-option .add-mr{
+    margin-right: 8px;
+}
+.mayself-content{
+    position: relative;
+    margin-top: -22.5px;
+}
+.mayself-content .mayself-top{
+    position: relative;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+.mayself-content .mayself-top{
+    position: relative;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.mayself-top .top-infos{
+    position: relative;
+    padding: 8.5px;
+    background: #ffffff;
+    box-shadow: 0 2px 7px 0 rgba(222,222,222,0.50);  /* no */
+    border-radius: 6px;
+    display: block;
+    font-size: 12px;    /* no */
+    color: #3B3B3B;
+    display: flex;
+    justify-content: 
+    space-between;
+    align-items: center;
+}
+.top-infos .icon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+.icon-declaration{
+    background: url("../../src/assets/icon-declaration.png") no-repeat;
+    background-size: 100% 100%; 
+}
+.icon-shipped{
+    background: url("../../src/assets/icon-shipped.png") no-repeat;
+    background-size: 100% 100%; 
+}
+.icon-house{
+    background: url("../../src/assets/icon-house.png") no-repeat;
+    background-size: 100% 100%; 
+}
+.icon-pay{
+    background: url("../../src/assets/icon-pay.png") no-repeat;
+    background-size: 100% 100%; 
+}
+.mayself-list{
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+}
+.cont-item{
+    padding-left: 5.5px;
+    padding-top: 8.5px;
+    padding-bottom: 8.5px;
+    position: relative;
+}
+.cont-item:after {
+    content: "";
+    position: absolute;
+    width: 3.5px;
+    height: 6.5px;
+    background: url("../../src/assets/icon-arrow-right.png") no-repeat;
+    background-size: cover;
+    top: 50%;
+    right: 5.5px;
+    transform: translateY(-50%);
+}
+li{
+    background: #ffffff;
+    border-bottom: 1px solid #F4F4F4; /* no */
+    font-size: 14px;    /* no */
+    color: #595B5F;
+    text-align: left;
+}
+li:last-child{
+    border-bottom: none;
+}

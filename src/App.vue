@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style>
-
+.bg-f5{
+    background: #f4f4f4;
+}
 </style>
