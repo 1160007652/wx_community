@@ -45,10 +45,12 @@
       <!-- 菜单栏 -->
       <div class="menu">
         <ul>
-          <router-link to="/rentSale" tag="li" class="nav-link">
-            <img src="../assets/rentout.png" />
-            <a>租售服务</a>
-          </router-link>
+          <li>
+            <router-link to="/rentSale" class="nav-link">
+              <img src="../assets/rentout.png" />
+              <span>租售服务</span>
+            </router-link>
+          </li>
           <li @click="confirm">
             <img src="../assets/tzgg.png" />
             <a>通知公告</a>

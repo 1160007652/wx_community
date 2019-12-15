@@ -113,11 +113,12 @@
     height: 13px;
     padding-bottom: 6.5px;
 }
-.menu li a{
+.menu li a,span{
     display: block;
     font-size: 6px;
     color: #262525;
 }
+
 .pdt-15{
     padding-top: 15px !important;
 }
