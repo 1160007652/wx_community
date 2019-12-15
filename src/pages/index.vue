@@ -5,21 +5,24 @@
       <div class="Location">
         <ul>
           <span class="Location_title">亚运城南荣花园小区</span>
-          <img src="../assets/Arrow.png" />
+          <img src="../assets/Arrow.png" @click="indexforsearch"/>
           <p class="lastmonth">上月服务评价</p>
         </ul>
-        <div class="Location_msg">
+        <div class="Location_msg" >
           <img src="../assets/msg.png" />
         </div>
       </div>
       <!-- 轮播 -->
       <div class="wrapper">
-        <swiper :options="swiperOption" ref="mySwiper">
+        <swiper :options="swiperOption" >
           <!-- slides -->
           <swiper-slide v-for="(item,index) in listimg" :key="index">
-            <img :src="item.img"/>
+            <img :src="item.img" :key="index"/>
           </swiper-slide>
-          <div class="swiper-pagination" v-for="(item,index) in listimg" :key="index" slot="pagination" ></div>
+          <div
+            class="swiper-pagination"
+            slot="pagination"
+          ></div>
         </swiper>
       </div>
       <!-- 认证 -->
@@ -30,7 +33,7 @@
       </div>
       <!-- 保修 -->
       <div class="Property">
-        <div class="box">
+        <div class="box" @click="confirm">
           <img src="../assets/box_2.png" />
         </div>
         <div class="box">
@@ -42,37 +45,37 @@
       <!-- 菜单栏 -->
       <div class="menu">
         <ul>
-          <li>
+          <li @click="confirm">
             <img src="../assets/rentout.png" />
             <a>租售服务</a>
           </li>
-          <li>
+          <li @click="confirm">
             <img src="../assets/tzgg.png" />
             <a>通知公告</a>
           </li>
-          <li>
+          <li @click="confirm">
             <img src="../assets/lxwy.png" />
             <a>联系物业</a>
           </li>
-          <li>
+          <li @click="confirm">
             <img src="../assets/bj.png" />
             <a>便捷服务</a>
           </li>
         </ul>
         <ul class="pdt-15">
-          <li>
+          <li @click="confirm">
             <img src="../assets/jfsc.png" />
             <a>积分商城</a>
           </li>
-          <li>
+          <li @click="confirm">
             <img src="../assets/jzfw.png" />
             <a>家政服务</a>
           </li>
-          <li>
+          <li @click="confirm">
             <img src="../assets/jrfw.png" />
             <a>金融服务</a>
           </li>
-          <li>
+          <li @click="confirm">
             <img src="../assets/gdfw.png" />
             <a>更多服务</a>
           </li>
@@ -112,7 +115,7 @@
                 <span class="text">
                   <p>积分商城</p>积分兑换，好礼不断
                 </span>
-                <span class="button">详情</span>
+                <span class="button" @click="confirm">详情</span>
               </li>
             </ul>
             <ul>
@@ -123,7 +126,7 @@
                 <span class="text">
                   <p>猫眼电影</p>积分兑换，畅享大片
                 </span>
-                <span class="button">详情</span>
+                <span class="button" @click="confirm">详情</span>
               </li>
             </ul>
             <ul>
@@ -134,11 +137,11 @@
                 <span class="text">
                   <p>滴滴出行</p>安全出行，优惠不断
                 </span>
-                <span class="button">详情</span>
+                <span class="button" @click="confirm">详情</span>
               </li>
             </ul>
             <div class="textc">
-              <div class="service_list_button">查看更多</div>
+              <div class="service_list_button" @click="confirm">查看更多</div>
             </div>
           </div>
         </div>
@@ -181,7 +184,7 @@
             </li>
           </ul>
           <div class="textc">
-            <div class="service_list_button">全部话题</div>
+            <div class="service_list_button" @click="confirm">全部话题</div>
           </div>
         </div>
       </div>
@@ -193,15 +196,15 @@
           <img src="../assets/index.png" />
           <a class="active">首页</a>
         </li>
-        <li>
+        <li @click="confirm">
           <img src="../assets/shequ.png" />
           <a>社区</a>
         </li>
-        <li>
+        <li @click="confirm">
           <img src="../assets/sh.png" />
           <a>生活</a>
         </li>
-        <li>
+        <li @click="indexformy">
           <img src="../assets/me.png" />
           <a>我的</a>
         </li>
@@ -214,22 +217,45 @@
 </style>
 
 <script>
+import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
   name: "Index",
   data() {
     return {
-       listimg:[
-        {img: require('../assets/banner1.png')},
-        {img: require('../assets/banner2.png')}
-       ],
+      listimg: [
+        { img: require("../assets/banner1.png") },
+        { img: require("../assets/banner2.png") }
+      ],
       swiperOption: {
         pagination: {
           el: ".swiper-pagination",
           clickable: true
         },
-        loop: true
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false //用户操作swiper之后，是否禁止autoplay。
+        }
       }
     };
+  },
+  components: {
+    swiper,
+    swiperSlide
+  },
+  methods: {
+    confirm() {
+      this.$alert("功能未开放");
+    },
+    indexforsearch(type) {
+     this.$router.push({
+          name: 'ChoiceCommunity',
+        })
+    },
+    indexformy(type) {
+     this.$router.push({
+          name: 'Myself',
+        })
+    },
   }
 };
 </script>

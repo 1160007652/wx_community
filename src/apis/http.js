@@ -2,7 +2,7 @@ import axios from 'axios'
 
 //创建axios的一个实例 
 var instance = axios.create({
-    baseURL:'http://112.253.24.138:8088/',
+    baseURL:'http://112.253.24.138:8088/wypt_webchat',
     timeout: 6000
 })
 

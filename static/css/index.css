@@ -32,7 +32,7 @@
     border-radius: 0px 10px 10px 0px;
     width: 43px;
     height: 8px;
-    line-height: 6.5px;
+    line-height: 8px;
 }
 .lastmonth span{
     font-family: 'PingFangSC-Medium';
@@ -43,36 +43,36 @@
     padding: 5.5px;
 }
 .swiper-container{
-     /* border-radius: 3px; */
+     border-radius: 3px;
 }
 .swiper-slide{
     width: auto;
 }
-/* .swiper-slide {
+.swiper-slide {
     height: 62px;
     line-height:62px;
     text-align: center;
     background-color: rosybrown;
-  } */
-  .swiper-slide .inner{
-      /* width: 353px;
-      height: 60px; */
+  }
+  /* .swiper-slide .inner{
+      width: 353px;
+      height: 60px; 
       position: relative;
       width: 176.5px;
       height: 62px;
       border-radius: 3px;
       background: black;
       
-  }
-  .swiper-slide .inner img{
+  } */
+  /* .swiper-slide .inner img{
     display: inline-block;
     width: 100%;
     height: 100%;
-  }
-  /* .swiper-slide img{
+  } */
+  .swiper-slide img{
       width: 100%;
       height: 100%;
-  } */
+  }
 .Authentication{
     width: 100%;
 }
@@ -140,10 +140,11 @@
     height: 100%;
 }
 .notice_list{
-    height: 18.8px;
+    /* height: 18.8px; */
     display: inline-block;
     padding-left: 4px !important;
     vertical-align: middle;
+    float:right;
 }
 .notice_list li:first-child{
    padding-bottom:4px;
@@ -305,6 +306,7 @@
 .footer{
     width: 100%;
     /* height: 22px; */
+    vertical-align: middle;
     background: #FFFFFF;
     /* position: absolute;bottom:0; */
     position:fixed;bottom:0;z-index:999;
@@ -313,11 +315,12 @@
 
 .roll{
     padding-bottom:22px;
+    overflow: hidden;
  }
 
 .footer ul{
     width: 90%;
-    padding: 0 2%;
+    padding: 1% 5%;
     display:flex;
    display:-webkit-flex;/*Safari*/
    justify-content:space-between;/*水平排布方式*/
@@ -343,4 +346,10 @@
     background-size: 100% 100%; 
     background-repeat: no-repeat; 
     background-image:url('../../src/assets/banner.png'); 
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 10px;/*px*/
+    left:90% !important;
+    width: 10% !important;
 }

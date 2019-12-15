@@ -7,10 +7,21 @@ import 'lib-flexible/flexible'
 import '../static/css/common.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'  //引入vue-awesome-swiper
 import 'swiper/dist/css/swiper.css'
+import {Alert, Confirm, Toast} from 'wc-messagebox'
+import 'wc-messagebox/style.css'
+ 
+var options = {
+  title: '',
+}
+Vue.use(Alert, options)
+Vue.use(Confirm, options)
+Vue.use(Toast, options)
+
 
 Vue.config.productionTip = false
 
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+Vue.use(VueAwesomeSwiper, options)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
