@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '../pages/index'
 import Identity from '../pages/Identity'
 import Pay from '../pages/pay'
+import RentSale from '../pages/rentSale' // 租售服务
 import Detail from '../components/payTabs/PaidDetail'
 import Myself from '../pages/myself'  //我的
 import ChoiceCommunity from '../pages/choiceCommunity'  //选择社区
@@ -25,6 +26,11 @@ export default new Router({
       path: '/pay',
       name: 'Pay',
       component: Pay
+    },
+    {
+      path: '/rentSale',
+      name: 'RentSale',
+      component: RentSale
     },
     {
       path: '/detail',
